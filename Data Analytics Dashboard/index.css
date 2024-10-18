@@ -1,0 +1,173 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    background: linear-gradient(rgba(34, 31, 38, 0.7), rgba(34, 31, 38, 0.7)),url(./bg.jpg);
+    background-position: 20% 50%;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    padding: 0.5em 0;
+}
+
+.logo{
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #2D7DFF;
+}
+
+nav{
+    display: none;
+    /* position: absolute; */
+    left: 0;
+    top: 0;
+    color: white;
+    background-color: rgba(44, 41, 49, 1);
+    height: 100vh;
+    width: 50vw;
+    z-index: 1;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li{
+    font-size: 1rem;
+    padding: 0.8em 0;
+    padding-left: 1.5em;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+ul img{
+    transform: scaleX(-1);
+    margin: 1.1em 1em 1em;
+}
+
+.active{
+    background-color: #2D7DFF;
+    width: calc(100%-1.5em);
+}
+
+#hamMenu{
+    /* display: none; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 1.5em 0 0 1em;
+}
+
+main{
+    margin-top: 5em;
+    margin-left: 3rem;
+}
+
+h1{
+    font-size: 3rem;
+    line-height: 3.5rem;
+    color: rgba(255, 255, 255, 1);
+}
+
+p{
+    font-size: 2.125rem;
+    font-weight: 275;
+    line-height: 1.2em;
+    color: rgba(132, 125, 147, 1);
+    width: 70%;
+}
+
+button{
+    display: flex;
+    align-items: center;
+    color: rgba(255, 255, 255, 1);
+    background-color: transparent;
+    border: 1px solid rgba(77, 77, 77, 1);
+    padding: 0.8em 1.6em;
+}
+
+button img{
+    margin-right: 0.5em;
+}
+
+@media (max-width:1024px) {
+    nav{
+        position: absolute;
+    }
+    
+}
+
+
+@media (min-width:1024px) {
+    
+    body{
+        height: 100vh;
+        background-size: cover;
+        display: grid;
+        grid-template-columns: 1fr 6fr;
+        grid-template-rows: 1fr 10fr;
+        grid-template-areas: 
+        "nav logo"
+        "nav main";
+    }
+
+    main{
+        height: fit-content;
+        margin-left: 6.75rem;
+    }
+
+    h1{
+        font-size: 4rem;
+        width: 40%;
+        margin: 0;
+    }
+
+    p{
+        font-size: 3rem;
+        width: 40%;
+    }
+
+    button{
+        height: 60px;
+        font-size: 1.125rem;
+    }
+
+    header{
+        height: fit-content;
+        justify-content: flex-start;
+        margin: 0;
+        padding: 0;
+        grid-area: nav;
+    }
+
+    nav{
+        height: 100vh;
+        display: block;
+        position: unset;
+        color: white;
+        background-color: rgba(44, 41, 49, 1);
+        width: 20vw;
+        z-index: 1;
+    }
+
+    #backBtn{
+        visibility: hidden;
+    }
+
+    #hamMenu{
+        visibility: hidden;
+    }
+
+    .logo{
+        text-align:left;
+        margin: 2.5em 0 0 4.5em;
+    }
+}
