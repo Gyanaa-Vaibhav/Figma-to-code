@@ -1,0 +1,154 @@
+html, body, h1, p{
+    margin: 0;
+    padding: 0;
+    font-family: "Bebas Neue",sans-serif;
+    color: white;
+}
+
+.heading{
+    background-image:linear-gradient(rgba(82, 0, 255, 0.7), rgba(82, 0, 255, 0.7)), url(./bg.jpg);
+    background-size: cover;
+    max-width: 100vw;
+    background-position: center;
+    padding: 1em;
+}
+
+h1{
+    margin-top: 1.5em;
+    text-transform: uppercase;
+    font-size: 4rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+p{
+    margin: 2em 0;
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-align: center;
+}
+
+label{
+    color: black;
+    font-weight: 500;
+    font-size: 1.15rem;
+    margin: 0.3em 0;
+}
+
+form{
+    margin-top: 2em;
+    padding: 1.5em;
+    display: flex;
+    flex-direction: column;
+}
+
+input{
+    margin: 0.5em 0;
+    height: 35px;
+    background: rgba(237, 237, 237, 1);
+    border-radius: 1px;
+    border: 1px solid rgba(199,199,199,1);
+}
+
+button{
+    background: rgba(82, 0, 255, 1);
+    color: white;
+    padding: 1em 2em;
+    border: none;
+    margin-top: 1.5em;
+}
+
+.name, .email{
+    display: flex;
+    flex-direction: column;
+}
+
+
+@media (min-width:700px) {
+    h1{
+        margin: 2em auto 0;
+        width: 50%;
+    }
+
+    p{
+        margin: 2em auto;
+        width: 50%;
+    }
+
+    form{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .name, .email{
+        display: flex;
+        flex-direction: column;
+    }
+
+    input{
+        width: 85%;
+    }
+
+    button{
+        width: 40%;
+    }
+
+}
+
+@media (min-width:1240px){
+    .container{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-areas: 
+        "heading form"
+        "heading form";
+        height: 100vh;
+    }
+
+    .heading{
+        grid-area: heading;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    h1{
+        font-size: 4.5rem;
+        text-align: right;
+    }
+
+    p{
+        font-size: 2rem;
+        text-align: right;
+    }
+
+    form{
+        grid-area: form;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 5em;
+    }
+
+    input{
+        font-size: 1.5rem;
+        height: 50px;
+        width: 50%;
+    }
+
+    label{
+        font-size: 1.5rem;
+    }
+
+    button{
+        width: 25%;
+        font-size: 1.5rem;
+        padding: 0.5em 1em;
+    }
+
+    .name,.email{
+        align-self: center;
+        width: 100%;
+    }
+}
